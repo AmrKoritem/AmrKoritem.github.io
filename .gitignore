@@ -1,8 +1,8 @@
 # Miscellaneous
-flutter_code/*.class
-flutter_code/*.log
-flutter_code/*.pyc
-flutter_code/*.swp
+flutter_code/**/*.class
+flutter_code/**/*.log
+flutter_code/**/*.pyc
+flutter_code/**/*.swp
 flutter_code/.DS_Store
 flutter_code/.atom/
 flutter_code/.buildlog/
@@ -11,9 +11,9 @@ flutter_code/.svn/
 flutter_code/migrate_working_dir/
 
 # IntelliJ related
-flutter_code/*.iml
-flutter_code/*.ipr
-flutter_code/*.iws
+flutter_code/**/*.iml
+flutter_code/**/*.ipr
+flutter_code/**/*.iws
 flutter_code/.idea/
 
 # The .vscode folder contains launch configuration and tasks you configure in
@@ -22,6 +22,7 @@ flutter_code/.idea/
 #.vscode/
 
 # Flutter/Dart/Pub related
+flutter_code/**/*.g.dart
 flutter_code/**/doc/api/
 flutter_code/**/ios/Flutter/.last_build_id
 flutter_code/.dart_tool/

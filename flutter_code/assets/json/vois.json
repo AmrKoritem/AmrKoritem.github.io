@@ -1,0 +1,17 @@
+{
+    "iOS": [
+        {
+            "name": "Vodafone Core Libraries",
+            "image_name": "vois",
+            "description": "The core libraries used by all market apps.",
+            "is_from_scratch": false,
+            "is_maintained": true,
+            "is_add_feat": true,
+            "is_redesign": false,
+            "is_handed_over": false,
+            "isSwiftUI": false,
+            "link": "",
+            "tags": []
+        }
+    ]
+}
