@@ -1,44 +1,24 @@
-# Miscellaneous
-flutter_code/**/*.class
-flutter_code/**/*.log
-flutter_code/**/*.pyc
-flutter_code/**/*.swp
-flutter_code/.DS_Store
-flutter_code/.atom/
-flutter_code/.buildlog/
-flutter_code/.history
-flutter_code/.svn/
-flutter_code/migrate_working_dir/
+# Logs
+react-code/logs
+react-code/*.log
+react-code/npm-debug.log*
+react-code/yarn-debug.log*
+react-code/yarn-error.log*
+react-code/pnpm-debug.log*
+react-code/lerna-debug.log*
 
-# IntelliJ related
-flutter_code/**/*.iml
-flutter_code/**/*.ipr
-flutter_code/**/*.iws
-flutter_code/.idea/
+react-code/node_modules
+react-code/dist
+react-code/dist-ssr
+react-code/*.local
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
-
-# Flutter/Dart/Pub related
-flutter_code/**/*.g.dart
-flutter_code/**/doc/api/
-flutter_code/**/ios/Flutter/.last_build_id
-flutter_code/.dart_tool/
-flutter_code/.flutter-plugins
-flutter_code/.flutter-plugins-dependencies
-flutter_code/.packages
-flutter_code/.pub-cache/
-flutter_code/.pub/
-flutter_code/build/
-
-# Web related
-flutter_code/lib/generated_plugin_registrant.dart
-
-# Symbolication related
-flutter_code/app.*.symbols
-
-# Obfuscation related
-flutter_code/app.*.map.json
-
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
