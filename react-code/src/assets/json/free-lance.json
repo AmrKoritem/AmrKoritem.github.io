@@ -1,0 +1,73 @@
+{
+    "iOS": [
+        {
+            "name": "Drone Buddy",
+            "image": {
+                "link": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/e7/9c/51/e79c511b-665d-ad11-cf96-bd0f5317c1d4/AppIcon-1x_U007emarketing-0-10-0-85-220.png/540x540bb.jpg",
+                "alt": "Drone Buddy: Fly Drone Safely"
+            },
+            "description": "Drone Buddy is a handy app built for drone pilots. It provides accurate weather information for your drone flight.",
+            "is_from_scratch": false,
+            "is_maintained": false,
+            "is_add_feat": false,
+            "is_redesign": true,
+            "is_handed_over": false,
+            "isSwiftUI": false,
+            "migration": {
+                "from": "objective c",
+                "to": "swift 5"
+            },
+            "link": "https://apps.apple.com/us/app/drone-buddy-fly-uav-safe-wind/id992303145",
+            "tags": [
+                "MVC",
+                "Restful api",
+                "Api-based search",
+                "Autolayout",
+                "Online payment"
+            ]
+        },
+        {
+            "name": "Fanzword",
+            "image": {
+                "link": "https://is4-ssl.mzstatic.com/image/thumb/Purple116/v4/75/e4/f2/75e4f2fa-dd1c-3797-a5c6-1363982a2316/AppIcon-0-1x_U007emarketing-0-10-0-85-220.png/540x540bb.jpg",
+                "alt": "Fanzword: Fantasy Football 365"
+            },
+            "description": "Fanzword is a 360 Live Fantasy Game, besides following live match score, transfer news and sport schedule and goal you can play Fantasy sport in a whole new way.",
+            "is_from_scratch": true,
+            "is_maintained": false,
+            "is_add_feat": false,
+            "is_redesign": false,
+            "is_handed_over": true,
+            "isSwiftUI": true,
+            "link": "https://apps.apple.com/us/app/fanzword-live-soccer-score/id1511800806",
+            "tags": [
+                "MVVM",
+                "Restful api",
+                "Api-based search",
+                "SwiftUI"
+            ]
+        },
+        {
+            "name": "Puddle Buddy",
+            "image": {
+                "link": "",
+                "alt": "Image Unavailable"
+            },
+            "description": "",
+            "is_from_scratch": true,
+            "is_maintained": false,
+            "is_add_feat": false,
+            "is_redesign": false,
+            "is_handed_over": true,
+            "isSwiftUI": false,
+            "link": "",
+            "tags": [
+                "MVP",
+                "Realm",
+                "Location monitoring (all app states)",
+                "Autolayout",
+                "Hardware sensors"
+            ]
+        }
+    ]
+}
