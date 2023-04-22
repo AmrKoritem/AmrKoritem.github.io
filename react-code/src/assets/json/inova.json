@@ -1,5 +1,5 @@
 {
-    "iOS": [
+    "ios": [
         {
             "name": "Loogma",
             "image": {
@@ -212,7 +212,7 @@
             ]
         }
     ],
-    "Flutter": [
+    "flutter": [
         {
             "name": "Med Valley",
             "image": {
