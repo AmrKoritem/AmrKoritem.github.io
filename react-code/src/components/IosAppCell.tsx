@@ -11,8 +11,10 @@ const IosAppCell: React.FC<{app: IosApp}> = (props) => {
         marginLeft: "20px"
     }
     return (
-        <div key={props.app.name} style={cellStyle}>
-            <AppImage link={props.app.image.link} alt={props.app.image.alt} />
+        <div style={cellStyle}>
+            <a href={props.app.link}>
+                <AppImage link={props.app.image.link} alt={props.app.image.alt} />
+            </a>
             <p>{props.app.name}</p>
         </div>
     )

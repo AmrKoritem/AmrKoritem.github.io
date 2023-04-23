@@ -29,7 +29,7 @@ const FlutterAppCell: React.FC<{app: FlutterApp}> = (props) => {
                 <img
                 src={playStoreBadge}
                 alt="Download on the Play Store"
-                style={{borderRadius: "6px", width: "125px", height: "41px"}} />
+                style={{borderRadius: "6px", width: "125px", height: "40px"}} />
             </a>
         </div>
     )
