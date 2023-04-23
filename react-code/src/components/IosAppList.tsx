@@ -6,7 +6,7 @@ const IosAppList: React.FC<{iosApps: IosApp[]}> = (props) => {
     return (
         <>
             <div style={{ display: "flex", flexDirection: "row", overflowX: "scroll" }}>
-            {props.iosApps.map(app => <IosAppCell app={app} />)}
+            {props.iosApps.map(app => <IosAppCell key={app.name} app={app} />)}
             </div>
         </>
     )
