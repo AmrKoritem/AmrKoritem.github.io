@@ -3,8 +3,8 @@
         {
             "name": "Vodafone Core Libraries",
             "image": {
-                "link": "",
-                "alt": "Image Unavailable"
+                "link": "https://scontent.fcai19-8.fna.fbcdn.net/v/t39.30808-6/245233520_291298762832233_3691268566228557127_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=QNWu6G8bqOEAX8ZcnYd&_nc_ht=scontent.fcai19-8.fna&oh=00_AfDUOcWiEJi3RaUDbJ8i_ZH6TQB3uU-L1LlG1j1_n6fw2Q&oe=644B741B",
+                "alt": "Vodafone | VOIS"
             },
             "description": "The core libraries used by all market apps.",
             "is_from_scratch": false,

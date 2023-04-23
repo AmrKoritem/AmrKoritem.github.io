@@ -1,5 +1,6 @@
 import React from "react"
 import { IosApp } from "../models/IosApp"
+import AppImage from "./AppImage"
 
 const IosAppCell: React.FC<{app: IosApp}> = (props) => {
     let cellStyle: React.CSSProperties = {
@@ -9,10 +10,9 @@ const IosAppCell: React.FC<{app: IosApp}> = (props) => {
         marginRight: "20px",
         marginLeft: "20px"
     }
-    let imageStyle: React.CSSProperties = { width: "100px", height: "100px", borderRadius: "22%" }
     return (
         <div key={props.app.name} style={cellStyle}>
-            <img  src={props.app.image.link} alt={props.app.image.alt} style={imageStyle} />
+            <AppImage link={props.app.image.link} alt={props.app.image.alt} />
             <p>{props.app.name}</p>
         </div>
     )

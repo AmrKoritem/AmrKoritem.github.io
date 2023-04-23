@@ -8,6 +8,7 @@ import JobAppsView from './components/JobAppsView'
 function App() {
   return (
     <div>
+      <JobAppsView title={"VOIS"} jobApps={vois} />
       <JobAppsView title={"Free Lance"} jobApps={freeLance} />
       <JobAppsView title={"Inova"} jobApps={inova} />
     </div>
