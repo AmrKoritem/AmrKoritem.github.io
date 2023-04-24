@@ -1,10 +1,10 @@
 {
     "swift": [
         {
-            "name": "AKLanguageManager Library",
+            "name": "AKLanguageManager",
             "image": {
-                "link": "",
-                "alt": "Image Unavailable"
+                "link": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+                "alt": "Github"
             },
             "description": "AKLanguageManager is a language manager that localizes your app without having to restart it. It handles strings, numbers, layout direction, images direction and text alignment.",
             "latest_version": "v2.0.2",

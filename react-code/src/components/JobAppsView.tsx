@@ -1,6 +1,6 @@
 import React from "react"
 import { JobApps } from "../models/JobApps"
-import IosAppList from "./IosAppList"
+import AchievementList from "./AchievementList"
 import FlutterAppList from "./FlutterAppList"
 
 const JobAppView: React.FC<{title: string, jobApps: JobApps}> = (props) => {
@@ -8,7 +8,7 @@ const JobAppView: React.FC<{title: string, jobApps: JobApps}> = (props) => {
     return (
         <>
             <h2 style={headerStyle}>{props.title}</h2>
-            {props.jobApps.ios && <IosAppList iosApps={props.jobApps.ios} />}
+            {props.jobApps.ios && <AchievementList achievements={props.jobApps.ios} />}
             {props.jobApps.flutter && <FlutterAppList flutterApps={props.jobApps.flutter} />}
         </>
     )
