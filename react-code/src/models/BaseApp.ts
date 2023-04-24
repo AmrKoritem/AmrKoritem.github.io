@@ -1,15 +1,7 @@
 import { Migration } from "./Migration"
-import { Image } from "./Image"
+import { Achievement } from "./Achievement"
 
-export interface BaseApp {
-    name: string
-    image: Image
-    description: string
-    is_from_scratch: boolean
-    is_maintained: boolean
-    is_add_feat: boolean
+export interface BaseApp extends Achievement {
     is_redesign: boolean
-    is_handed_over: boolean
     migration?: Migration
-    tags: string[]
 }
