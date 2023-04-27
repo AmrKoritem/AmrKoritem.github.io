@@ -3,7 +3,7 @@ import { Achievement } from "../models/Achievement"
 import AppImage from "./AppImage"
 
 const AchievementCell: React.FC<{achievement: Achievement, link?: string}> = (props) => {
-    let cellStyle: React.CSSProperties = {
+    const cellStyle: React.CSSProperties = {
         display: "flex",
         flexDirection: "column",
         width: "180px",

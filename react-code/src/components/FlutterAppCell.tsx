@@ -4,7 +4,7 @@ import AchievementCell from "./AchievementCell"
 import StoreButton from "./StoreButton"
 
 const FlutterAppCell: React.FC<{app: FlutterApp}> = (props) => {
-    let cellStyle: React.CSSProperties = {
+    const cellStyle: React.CSSProperties = {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",

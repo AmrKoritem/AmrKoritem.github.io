@@ -2,7 +2,7 @@ import React from "react"
 import playStoreBadge from "../assets/image/google-play-badge.png"
 
 const StoreButton: React.FC<{link: string, isAppStore: boolean}> = (props) => {
-    let appStoreBadge = "https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1625097600"
+    const appStoreBadge = "https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1625097600"
     return (
         <a
         href={props.link}

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import freeLance from './assets/json/free-lance.json'
 import inova from './assets/json/inova.json'
 import openSource from './assets/json/open-source.json'
@@ -27,8 +27,8 @@ function App() {
   if (isGroupingMode) {
     return groupingView()
   }
-  let libs = openSource.swift as Achievement[]
-  let allAchievements = libs.concat(vois.ios).concat(freeLance.ios).concat(inova.ios)
+  const libs = openSource.swift as Achievement[]
+  const allAchievements = libs.concat(vois.ios).concat(freeLance.ios).concat(inova.ios)
   return (
     <AllAchievementsView achievements={allAchievements} flutterApps={inova.flutter} />
   )
