@@ -6,6 +6,7 @@ const AchievementCell: React.FC<{achievement: Achievement, link?: string}> = (pr
     let cellStyle: React.CSSProperties = {
         display: "flex",
         flexDirection: "column",
+        width: "180px",
         alignItems: "center",
         marginRight: "20px",
         marginLeft: "20px"
@@ -15,7 +16,7 @@ const AchievementCell: React.FC<{achievement: Achievement, link?: string}> = (pr
             <a href={props.link}>
                 <AppImage link={props.achievement.image.link} alt={props.achievement.image.alt} />
             </a>
-            <p>{props.achievement.name}</p>
+            <p style={{ textAlign: "center", marginTop: "0" }}>{props.achievement.name}</p>
         </div>
     )
 }

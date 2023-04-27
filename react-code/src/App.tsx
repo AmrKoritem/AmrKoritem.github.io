@@ -5,17 +5,32 @@ import openSource from './assets/json/open-source.json'
 import vois from './assets/json/vois.json'
 import JobAppsView from './components/JobAppsView'
 import AchievementList from './components/AchievementList'
+import AllAchievementsView from './components/AllAchievementsView'
+import { Achievement } from './models/Achievement'
+import AchievementHeader from './components/AchievementHeader'
 
-function App() {
+function groupingView() {
   let swiftLibs = openSource.swift
   return (
     <>
-      <h2 style={{ marginRight: "10px", marginLeft: "10px" }}>Libraries</h2>
+      <AchievementHeader title="Libraries" />
       <AchievementList achievements={swiftLibs} />
       <JobAppsView title={"VOIS"} jobApps={vois} />
       <JobAppsView title={"Free Lance"} jobApps={freeLance} />
       <JobAppsView title={"Inova"} jobApps={inova} />
     </>
+  )
+}
+
+function App() {
+  let [isGroupingMode, setIsGroupingMode] = useState(false)
+  if (isGroupingMode) {
+    return groupingView()
+  }
+  let libs = openSource.swift as Achievement[]
+  let allAchievements = libs.concat(vois.ios).concat(freeLance.ios).concat(inova.ios)
+  return (
+    <AllAchievementsView achievements={allAchievements} flutterApps={inova.flutter} />
   )
 }
 

@@ -1,0 +1,38 @@
+.achievementGrid {
+    display: grid;
+    gap: 10px;
+    margin: 0 auto;
+    grid-template-columns: repeat(1, 180px);
+}
+
+@media (min-width: 300px) {
+    .achievementGrid { grid-template-columns: repeat(2, 180px); }
+}
+
+@media (min-width: 550px) {
+    .achievementGrid { grid-template-columns: repeat(3, 180px); }
+}
+
+@media (min-width: 800px) {
+    .achievementGrid { grid-template-columns: repeat(4, 180px); }
+}
+
+@media (min-width: 950px) {
+    .achievementGrid { grid-template-columns: repeat(5, 180px); }
+}
+
+@media (min-width: 1150px) {
+    .achievementGrid { grid-template-columns: repeat(6, 180px); }
+}
+
+@media (min-width: 1300px) {
+    .achievementGrid { grid-template-columns: repeat(7, 180px); }
+}
+
+@media (min-width: 1500px) {
+    .achievementGrid { grid-template-columns: repeat(8, 180px); }
+}
+
+@media (min-width: 1700px) {
+    .achievementGrid { grid-template-columns: repeat(9, 180px); }
+}
