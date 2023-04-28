@@ -1,6 +1,6 @@
 import React from "react"
 import { FlutterApp } from "../models/FlutterApp"
-import AchievementCell from "./AchievementCell"
+import AchievementCell from "./achievement_views/AchievementCell"
 import StoreButton from "./StoreButton"
 
 const FlutterAppCell: React.FC<{app: FlutterApp}> = (props) => {

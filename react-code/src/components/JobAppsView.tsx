@@ -1,8 +1,8 @@
 import React from "react"
 import { JobApps } from "../models/JobApps"
-import AchievementList from "./AchievementList"
+import AchievementList from "./achievement_views/AchievementList"
 import FlutterAppList from "./FlutterAppList"
-import AchievementHeader from "./AchievementHeader"
+import AchievementHeader from "./achievement_views/AchievementHeader"
 
 const JobAppView: React.FC<{title: string, jobApps: JobApps}> = (props) => {
     return (

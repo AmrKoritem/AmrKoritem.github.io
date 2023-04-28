@@ -1,6 +1,6 @@
 import React from "react"
-import { Achievement } from "../models/Achievement"
-import AppImage from "./AppImage"
+import { Achievement } from "../../models/Achievement"
+import AppImage from "../AppImage"
 
 const AchievementCell: React.FC<{achievement: Achievement, link?: string}> = (props) => {
     const cellStyle: React.CSSProperties = {

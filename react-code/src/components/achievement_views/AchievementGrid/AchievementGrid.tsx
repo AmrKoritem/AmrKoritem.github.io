@@ -1,9 +1,9 @@
 import React from "react"
 import styles from "./AchievementGrid.module.css"
-import { Achievement } from "../../models/Achievement"
-import { FlutterApp } from "../../models/FlutterApp"
+import { Achievement } from "../../../models/Achievement"
+import { FlutterApp } from "../../../models/FlutterApp"
 import AchievementCell from "../AchievementCell"
-import FlutterAppCell from "../FlutterAppCell"
+import FlutterAppCell from "../../FlutterAppCell"
 
 const AchievementGrid: React.FC<{achievements: Achievement[]}> = (props) => {
     return (
