@@ -4,7 +4,6 @@ import swift from "../../assets/image/swift.png"
 import flutter from "../../assets/image/flutter.png"
 import openSource from "../../assets/image/open-source.png"
 import linkedIn from "../../assets/image/linked-in.png"
-import github from "../../assets/image/github.png"
 
 const HomeButtonsView: React.FC = (props) => {
     const imageStyle: React.CSSProperties = {

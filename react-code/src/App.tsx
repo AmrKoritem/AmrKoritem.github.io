@@ -10,19 +10,11 @@ import InfoHeader from './components/InfoHeader'
 import AchievementList from './components/achievement_views/AchievementList'
 import AchievementHeader from './components/achievement_views/AchievementHeader'
 import AchievementGrid from './components/achievement_views/AchievementGrid/AchievementGrid'
-import HomeDescription from './components/home_views/HomeDescription'
-import HomeButtonsView from './components/home_views/HomeButtonsView'
+import HomeView from './components/home_views/HomeView'
 
 function App() {
   return (
-    <div style={{
-        display: "flex",
-        margin: 0,
-        alignContent: "space-around"
-      }}>
-      <HomeDescription />
-      <HomeButtonsView />
-    </div>
+    <HomeView />
   )
   let [isGroupingMode, setIsGroupingMode] = useState(false)
   if (isGroupingMode) {
