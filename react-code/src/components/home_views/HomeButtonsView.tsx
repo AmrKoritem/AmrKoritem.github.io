@@ -5,7 +5,13 @@ import flutter from "../../assets/image/flutter.png"
 import openSource from "../../assets/image/open-source.png"
 import linkedIn from "../../assets/image/linked-in.png"
 
-const HomeButtonsView: React.FC = (props) => {
+type Props = {
+  projectsOnClickHandler: (React.FocusEventHandler<HTMLButtonElement>)
+  librariesOnClickHandler: (React.FocusEventHandler<HTMLButtonElement>)
+  onBlurHandler: (React.FocusEventHandler<HTMLButtonElement>)
+}
+
+const HomeButtonsView: React.FC<Props> = (props) => {
     const imageStyle: React.CSSProperties = {
         width: "15px",
         height: "15px",
@@ -21,21 +27,43 @@ const HomeButtonsView: React.FC = (props) => {
             placeItems: "center"
           }}>
           <div>
-            <HomeButton title="Projects">
+            <HomeButton
+              title="Projects"
+              onClickHandler={props.projectsOnClickHandler}
+              onBlurHandler={props.onBlurHandler}>
               <img  src={swift} alt="swift" style={imageStyle} />
               <img  src={flutter} alt="flutter" style={imageStyle} />
             </HomeButton>
-            <HomeButton title="Libraries">
+            <HomeButton
+              title="Libraries"
+              onClickHandler={props.librariesOnClickHandler}
+              onBlurHandler={props.onBlurHandler}>
               <img  src={openSource} alt="open source" style={imageStyle} />
             </HomeButton>
           </div>
           <div>
-            <HomeButton title="LinkedIn">
-              <img  src={linkedIn} alt="linked in" style={imageStyle} />
-            </HomeButton>
-            <HomeButton title="Github">
-              <img  src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="github" style={imageStyle} />
-            </HomeButton>
+            <a href="https://www.linkedin.com/in/amr-koritem-976bb0125/" target="_blank">
+              <HomeButton
+                title="LinkedIn"
+                onMouseDownHandler={(e) => {
+                    e.preventDefault()
+                    e.stopPropagation()
+                }}
+                onBlurHandler={props.onBlurHandler}>
+                <img  src={linkedIn} alt="linked in" style={imageStyle} />
+              </HomeButton>
+            </a>
+            <a href="https://github.com/AmrKoritem" target="_blank">
+              <HomeButton
+                title="Github"
+                onMouseDownHandler={(e) => {
+                    e.preventDefault()
+                    e.stopPropagation()
+                }}
+                onBlurHandler={props.onBlurHandler}>
+                <img  src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="github" style={imageStyle} />
+              </HomeButton>
+            </a>
           </div>
         </div>
     )

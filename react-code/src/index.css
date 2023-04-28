@@ -36,6 +36,11 @@ body, h1, p {
   padding: 0;
 }
 
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -50,20 +55,10 @@ button {
 button:hover {
   border-color: #646cff;
 }
+button:disabled {
+  color: rgba(255, 255, 255, 0.87)
+}
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }

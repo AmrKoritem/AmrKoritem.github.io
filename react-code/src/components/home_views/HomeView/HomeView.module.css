@@ -3,6 +3,7 @@
     gap: 10px;
     margin: 0;
     grid-template-columns: repeat(2, auto);
+    place-items: center;
 }
 
 @media (max-width: 650px) {

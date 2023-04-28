@@ -3,6 +3,9 @@ import React from "react"
 type Props = {
     title: string
     children: string | JSX.Element | JSX.Element[]
+    onClickHandler?: (React.FocusEventHandler<HTMLButtonElement>)
+    onMouseDownHandler?: (React.MouseEventHandler<HTMLButtonElement>)
+    onBlurHandler?: (React.FocusEventHandler<HTMLButtonElement>)
 }
 
 const HomeButton: React.FC<Props> = (props) => {
@@ -17,7 +20,12 @@ const HomeButton: React.FC<Props> = (props) => {
         marginBottom: 10
     }
     return (
-        <button type="button" style={style}>
+        <button
+            onFocus={props.onClickHandler}
+            onMouseDown={props.onMouseDownHandler}
+            onBlur={props.onBlurHandler}
+            type="button"
+            style={style}>
             <p>{props.title}</p>
             {props.children}
         </button>
