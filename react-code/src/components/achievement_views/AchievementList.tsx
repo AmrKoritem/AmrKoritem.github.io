@@ -1,5 +1,5 @@
 import React from "react"
-import { Achievement } from "../models/Achievement"
+import { Achievement } from "../../models/Achievement"
 import AchievementCell from "./AchievementCell"
 
 const AchievementList: React.FC<{achievements: Achievement[]}> = (props) => {
