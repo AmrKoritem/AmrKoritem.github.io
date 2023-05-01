@@ -44,7 +44,7 @@ const LibrariesView: React.FC = (props) => {
 }
 
 const HomeView: React.FC = (props) => {
-    const [isSummary, setIsSummary] = useState(false)
+    const [isSummary, setIsSummary] = useState(true)
     const [currentTab, setCurrentTab] = useState(Tab.none)
     const updateSummary = (willSummary: boolean) => {
         setIsSummary(willSummary)
@@ -66,10 +66,12 @@ const HomeView: React.FC = (props) => {
                 <HomeButtonsView
                     projectsOnClickHandler={() => {updateCurrentTab(Tab.projects)}}
                     librariesOnClickHandler={() => {updateCurrentTab(Tab.libraries)}}
+                    summaryOnClickHandler={() => {updateSummary(true)}}
                     onBlurHandler={() => {updateCurrentTab(Tab.none)}} />
             </div>
             {currentTab === Tab.projects && <ProjectsView />}
             {currentTab === Tab.libraries && <LibrariesView />}
+            {isSummary && <InfoHeader />}
         </>
     )
 }

@@ -10,6 +10,7 @@ import contactMe from "../../assets/image/contact-me.png"
 type Props = {
   projectsOnClickHandler: (React.FocusEventHandler<HTMLButtonElement>)
   librariesOnClickHandler: (React.FocusEventHandler<HTMLButtonElement>)
+  summaryOnClickHandler: (React.FocusEventHandler<HTMLButtonElement>)
   onBlurHandler: (React.FocusEventHandler<HTMLButtonElement>)
 }
 
@@ -78,12 +79,13 @@ const HomeButtonsView: React.FC<Props> = (props) => {
         <Achievements
           projectsOnClickHandler={props.projectsOnClickHandler}
           librariesOnClickHandler={props.librariesOnClickHandler}
+          summaryOnClickHandler = {props.summaryOnClickHandler}
           onBlurHandler={props.onBlurHandler} />
         <Links onBlurHandler={props.onBlurHandler} />
       </div>
       <HomeButton
         title="Summary"
-        onClickHandler={() => {}}
+        onClickHandler={props.summaryOnClickHandler}
         onBlurHandler={props.onBlurHandler}>
         <img  src={summary} alt="summary" style={imageStyle} />
       </HomeButton>

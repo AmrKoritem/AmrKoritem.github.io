@@ -1,0 +1,12 @@
+{
+    "inova": {
+        "from": "01/07/2019",
+        "to": "28/02/2022",
+        "color": "gray"
+    },
+    "vois": {
+        "from": "01/03/2022",
+        "to": "present",
+        "color": "red"
+    }
+}
