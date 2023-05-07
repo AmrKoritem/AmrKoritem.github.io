@@ -1,11 +1,5 @@
-/* .homeView {
-    display: grid;
-    gap: 10px;
-    margin: 0;
-    grid-template-columns: repeat(2, auto);
-    place-items: center;
+.contactsView {
+    padding: 15px;
+    text-align: "start";
+    background-color: #1a1a1a;
 }
-
-@media (max-width: 650px) {
-    .homeView { grid-template-columns: repeat(1, auto); }
-} */

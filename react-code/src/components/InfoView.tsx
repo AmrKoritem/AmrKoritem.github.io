@@ -2,7 +2,7 @@ import React from "react"
 import amrKoritem from '../assets/image/amr-koritem.png'
 import ExperienceBar from "./ExperienceBar"
 
-const InfoHeader: React.FC = (props) => {
+const InfoView: React.FC = (props) => {
   const imageStyle: React.CSSProperties = {
     objectPosition: "left top",
     objectFit: "contain",
@@ -11,7 +11,7 @@ const InfoHeader: React.FC = (props) => {
     margin: "10px"
   }
   return (
-    <div style={{display: "flex", flexDirection: "row", textAlign: "start", backgroundColor: "#1a1a1a"}}>
+    <div style={{padding: 10, display: "flex", flexDirection: "row", textAlign: "start", backgroundColor: "#1a1a1a"}}>
       <img src={amrKoritem} style={imageStyle} />
       <div style={{marginLeft: "10px", marginRight: "10px", marginBottom: "10px"}}>
         <h2>Technical Info:</h2>
@@ -27,4 +27,4 @@ const InfoHeader: React.FC = (props) => {
   )
 }
 
-export default InfoHeader
+export default InfoView

@@ -11,10 +11,10 @@ import styles from "./HomeView.module.css"
 import HomeDescription from "../HomeDescription"
 import HomeButtonsView from "../HomeButtonsView"
 import AchievementHeader from '../../achievement_views/AchievementHeader'
-import AchievementGrid from './../../achievement_views/AchievementGrid/AchievementGrid'
-import InfoHeader from "../../InfoHeader"
+import AchievementGrid from './../../achievement_views/AchievementGrid'
+import InfoView from "../../InfoView"
 import OverlayView from "../../OverlayView"
-import ContactsView from "../../ContactsView/ContactsView"
+import ContactsView from "../../ContactsView"
 
 enum Tab {
     none,
@@ -54,7 +54,6 @@ const HomeView: React.FC = (props) => {
     }
     const updateSummary = (willSummary: boolean) => {
         setIsSummary(willSummary)
-        setCurrentTab(Tab.none)
     }
     const updateCurrentTab = (tab: Tab) => {
         if (tab != Tab.none) {
@@ -62,7 +61,6 @@ const HomeView: React.FC = (props) => {
         } else {
             document.body.style.display = "flex"
         }
-        setIsSummary(false)
         setCurrentTab(tab)
     }
     return (
@@ -82,7 +80,7 @@ const HomeView: React.FC = (props) => {
             </div>
             {currentTab === Tab.projects && <ProjectsView />}
             {currentTab === Tab.libraries && <LibrariesView />}
-            {isSummary && <InfoHeader />}
+            {isSummary && <OverlayView onCancelHandler={() => {updateSummary(false)}}><InfoView /></OverlayView>}
             {isContactMe && <OverlayView onCancelHandler={() => {updateContactMe(false)}}><ContactsView /></OverlayView>}
         </>
     )
