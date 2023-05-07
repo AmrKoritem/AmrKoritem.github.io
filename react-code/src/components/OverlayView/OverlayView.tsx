@@ -6,12 +6,10 @@ const OverlayView: React.FC<{children: ReactNode, onCancelHandler: React.MouseEv
     return (
         <>
             {createPortal(
-                <div className={styles.overlayBackground} onClick={props.onCancelHandler}></div>,
-                document.getElementById("overlay-background-root") as HTMLElement
-            )}
-            {createPortal(
                 <div className={styles.overlayView}>
-                    {props.children}
+                    <div onClick={props.onCancelHandler} style={{display: "flex", height: "100vh", placeItems: "center", placeContent: "center"}}>
+                        {props.children}
+                    </div>
                 </div>,
                 document.getElementById("overlay-view-root") as HTMLElement
             )}
