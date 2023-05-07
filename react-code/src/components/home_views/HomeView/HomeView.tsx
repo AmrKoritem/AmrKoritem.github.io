@@ -72,11 +72,7 @@ const HomeView: React.FC = (props) => {
                     librariesOnClickHandler={() => {updateCurrentTab(Tab.libraries)}}
                     summaryOnClickHandler={() => {updateSummary(true)}}
                     contactMeOnClickHandler={() => {updateContactMe(true)}}
-                    onBlurHandler={() => {
-                        updateCurrentTab(Tab.none)
-                        updateSummary(false)
-                        updateContactMe(false)
-                    }} />
+                    onBlurHandler={() => {updateCurrentTab(Tab.none)}} />
             </div>
             {currentTab === Tab.projects && <ProjectsView />}
             {currentTab === Tab.libraries && <LibrariesView />}
