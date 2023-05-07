@@ -13,6 +13,8 @@ import HomeButtonsView from "../HomeButtonsView"
 import AchievementHeader from '../../achievement_views/AchievementHeader'
 import AchievementGrid from './../../achievement_views/AchievementGrid/AchievementGrid'
 import InfoHeader from "../../InfoHeader"
+import OverlayView from "../../OverlayView"
+import ContactsView from "../../ContactsView/ContactsView"
 
 enum Tab {
     none,
@@ -44,8 +46,12 @@ const LibrariesView: React.FC = (props) => {
 }
 
 const HomeView: React.FC = (props) => {
-    const [isSummary, setIsSummary] = useState(true)
+    const [isContactMe, setIsContactMe] = useState(false)
+    const [isSummary, setIsSummary] = useState(false)
     const [currentTab, setCurrentTab] = useState(Tab.none)
+    const updateContactMe = (willContactMe: boolean) => {
+        setIsContactMe(willContactMe)
+    }
     const updateSummary = (willSummary: boolean) => {
         setIsSummary(willSummary)
         setCurrentTab(Tab.none)
@@ -67,11 +73,17 @@ const HomeView: React.FC = (props) => {
                     projectsOnClickHandler={() => {updateCurrentTab(Tab.projects)}}
                     librariesOnClickHandler={() => {updateCurrentTab(Tab.libraries)}}
                     summaryOnClickHandler={() => {updateSummary(true)}}
-                    onBlurHandler={() => {updateCurrentTab(Tab.none)}} />
+                    contactMeOnClickHandler={() => {updateContactMe(true)}}
+                    onBlurHandler={() => {
+                        updateCurrentTab(Tab.none)
+                        updateSummary(false)
+                        updateContactMe(false)
+                    }} />
             </div>
             {currentTab === Tab.projects && <ProjectsView />}
             {currentTab === Tab.libraries && <LibrariesView />}
             {isSummary && <InfoHeader />}
+            {isContactMe && <OverlayView onCancelHandler={() => {updateContactMe(false)}}><ContactsView /></OverlayView>}
         </>
     )
 }

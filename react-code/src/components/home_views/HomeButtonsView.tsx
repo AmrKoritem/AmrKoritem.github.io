@@ -11,6 +11,14 @@ type Props = {
   projectsOnClickHandler: (React.FocusEventHandler<HTMLButtonElement>)
   librariesOnClickHandler: (React.FocusEventHandler<HTMLButtonElement>)
   summaryOnClickHandler: (React.FocusEventHandler<HTMLButtonElement>)
+  contactMeOnClickHandler: (React.FocusEventHandler<HTMLButtonElement>)
+  onBlurHandler: (React.FocusEventHandler<HTMLButtonElement>)
+}
+
+type AchievementsProps = {
+  projectsOnClickHandler: (React.FocusEventHandler<HTMLButtonElement>)
+  librariesOnClickHandler: (React.FocusEventHandler<HTMLButtonElement>)
+  summaryOnClickHandler: (React.FocusEventHandler<HTMLButtonElement>)
   onBlurHandler: (React.FocusEventHandler<HTMLButtonElement>)
 }
 
@@ -21,7 +29,7 @@ const imageStyle: React.CSSProperties = {
   marginLeft: "5px"
 }
 
-const Achievements: React.FC<Props> = (props) => {
+const Achievements: React.FC<AchievementsProps> = (props) => {
   return (
     <div>
       <HomeButton title="Projects" onClickHandler={props.projectsOnClickHandler} onBlurHandler={props.onBlurHandler}>
@@ -31,11 +39,14 @@ const Achievements: React.FC<Props> = (props) => {
       <HomeButton title="Libraries" onClickHandler={props.librariesOnClickHandler} onBlurHandler={props.onBlurHandler}>
         <img  src={openSource} alt="open source" style={imageStyle} />
       </HomeButton>
+      <HomeButton title="Summary" onClickHandler={props.summaryOnClickHandler} onBlurHandler={props.onBlurHandler}>
+        <img  src={summary} alt="summary" style={imageStyle} />
+      </HomeButton>
     </div>
   )
 }
 
-const Links: React.FC<{onBlurHandler: (React.FocusEventHandler<HTMLButtonElement>)}> = (props) => {
+const Links: React.FC<{contactMeOnClickHandler: (React.FocusEventHandler<HTMLButtonElement>), onBlurHandler: (React.FocusEventHandler<HTMLButtonElement>)}> = (props) => {
   const onMouseDownHandler = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
       e.preventDefault()
       e.stopPropagation()
@@ -52,9 +63,9 @@ const Links: React.FC<{onBlurHandler: (React.FocusEventHandler<HTMLButtonElement
           <img  src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="github" style={imageStyle} />
         </HomeButton>
       </a>
-      {/* <HomeButton title="Contact Me" onClickHandler={() => {}} onBlurHandler={props.onBlurHandler}>
+      <HomeButton title="Contact Me" onClickHandler={props.contactMeOnClickHandler} onBlurHandler={props.onBlurHandler}>
         <img  src={contactMe} alt="contact me" style={imageStyle} />
-      </HomeButton> */}
+      </HomeButton>
     </div>
   )
 }
@@ -70,25 +81,15 @@ const HomeButtonsView: React.FC<Props> = (props) => {
     placeItems: "start"
   }
   return (
-    <div style={{
-      display: "flex",
-      flexDirection: "column",
-      placeItems: "center"
-    }}>
-      <div style={rawStyle}>
-        <Achievements
-          projectsOnClickHandler={props.projectsOnClickHandler}
-          librariesOnClickHandler={props.librariesOnClickHandler}
-          summaryOnClickHandler = {props.summaryOnClickHandler}
-          onBlurHandler={props.onBlurHandler} />
-        <Links onBlurHandler={props.onBlurHandler} />
-      </div>
-      <HomeButton
-        title="Summary"
-        onClickHandler={props.summaryOnClickHandler}
-        onBlurHandler={props.onBlurHandler}>
-        <img  src={summary} alt="summary" style={imageStyle} />
-      </HomeButton>
+    <div style={rawStyle}>
+      <Achievements
+        projectsOnClickHandler={props.projectsOnClickHandler}
+        librariesOnClickHandler={props.librariesOnClickHandler}
+        summaryOnClickHandler = {props.summaryOnClickHandler}
+        onBlurHandler={props.onBlurHandler} />
+      <Links
+        contactMeOnClickHandler = {props.contactMeOnClickHandler}
+        onBlurHandler={props.onBlurHandler} />
     </div>
   )
 }
