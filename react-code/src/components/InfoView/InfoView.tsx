@@ -1,6 +1,7 @@
 import React from "react"
-import amrKoritem from '../assets/image/amr-koritem.png'
-import ExperienceBar from "./ExperienceBar"
+import amrKoritem from '../../assets/image/amr-koritem.png'
+import ExperienceBar from "../ExperienceBar"
+import styles from "./InfoView.module.css"
 
 const PersonalInfo: React.FC = (props) => {
   const rowStyle: React.CSSProperties = {
@@ -12,8 +13,8 @@ const PersonalInfo: React.FC = (props) => {
     marginRight: 10
   }
   return (
-    <>
-      <h2 style={{margin: 5}}>Personal Info:</h2>
+    <div style={{marginLeft: 10, marginRight: 10, marginBottom: 10}}>
+      <h2 style={{marginTop: 5, marginBottom: 5}}>Personal Info:</h2>
       <div style={rowStyle}>
         <p><b>Name:</b></p>
         <p style={textMarginStyle}>Amr Mohamed Mohamed ElTaieb Koritem</p>
@@ -30,7 +31,7 @@ const PersonalInfo: React.FC = (props) => {
         <p><b>Marital status:</b></p>
         <p style={textMarginStyle}>Married</p>
       </div>
-    </>
+    </div>
   )
 }
 
@@ -50,20 +51,11 @@ const TechnicalInfo: React.FC = (props) => {
 }
 
 const InfoView: React.FC = (props) => {
-  const imageStyle: React.CSSProperties = {
-    objectPosition: "left top",
-    objectFit: "contain",
-    width: "15%",
-    minWidth: "150px",
-    margin: 10
-  }
   return (
-    <div style={{padding: 10, maxHeight: "80%", display: "flex", flexDirection: "column", textAlign: "start", backgroundColor: "#1a1a1a"}}>
-      <div style={{display: "flex", flexDirection: "row"}}>
-        <img src={amrKoritem} style={imageStyle} />
-        <div style={{marginLeft: 10, marginRight: 10, marginBottom: 10}}>
-          <PersonalInfo />
-        </div>
+    <div style={{padding: 10, display: "flex", flexDirection: "column", textAlign: "start", backgroundColor: "#1a1a1a"}}>
+      <div className={styles.topView}>
+        <img src={amrKoritem} className={styles.profilePicture} />
+        <PersonalInfo />
       </div>
       <TechnicalInfo />
     </div>

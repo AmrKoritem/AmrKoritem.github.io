@@ -1,0 +1,23 @@
+.topView {
+    display: flex;
+    flex-direction: row;
+}
+
+.profilePicture {
+    object-position: left top;
+    object-fit: contain;
+    width: 15%;
+    min-width: 150px;
+    margin: 10px;
+}
+
+@media (max-width: 400px) {
+    .topView {
+        flex-direction: column;
+        place-items: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .profilePicture { min-width: 350px; }
+}

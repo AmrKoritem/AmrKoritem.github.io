@@ -1,6 +1,6 @@
 import React from "react"
-import experience from '../assets/json/experience.json'
-import { Experience } from "../models/Experience"
+import experience from '../../assets/json/experience.json'
+import { Experience } from "../../models/Experience"
 import ExpBarSlice from "./ExpBarSlice"
 
 const ExperienceBar: React.FC = (props) => {
@@ -16,7 +16,7 @@ const ExperienceBar: React.FC = (props) => {
     <div style={expBarStyle}>
         {companies.map(company => {
           return (
-            <ExpBarSlice name={company} experience={exp[company as keyof Experience]} />
+            <ExpBarSlice key={company} name={company} experience={exp[company as keyof Experience]} />
           )
         })}
     </div>
