@@ -69,10 +69,7 @@ const TechnicalInfo: React.FC = (props) => {
 
 const InfoView: React.FC = (props) => {
   const infoStyle: React.CSSProperties = {
-    paddingTop: 10,
-    paddingRight: 10,
-    paddingLeft: 10,
-    paddingBottom: 30,
+    padding: 10,
     display: "flex",
     flexDirection: "column",
     textAlign: "start",
