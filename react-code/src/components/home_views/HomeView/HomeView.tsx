@@ -13,7 +13,6 @@ import HomeButtonsView from "../HomeButtonsView"
 import AchievementHeader from '../../achievement_views/AchievementHeader'
 import AchievementGrid from './../../achievement_views/AchievementGrid'
 import InfoView from "../../InfoView"
-import OverlayView from "../../OverlayView"
 import ContactsView from "../../ContactsView"
 
 enum Tab {
@@ -27,10 +26,9 @@ const ProjectsView: React.FC = (props) => {
     const achievements = inovaIos.concat(freeLance.ios).concat(inova.ios)
     return (
         <>
-            <AchievementHeader title="Mobile Apps" />
-            <h4>----- iOS -----</h4>
+            <AchievementHeader title="iOS Apps" />
             <AchievementGrid achievements={achievements} />
-            <h4>----- Flutter -----</h4>
+            <AchievementHeader title="Flutter Apps" />
             <AchievementGrid achievements={inova.flutter} />
         </>
     )
@@ -65,7 +63,7 @@ const HomeView: React.FC = (props) => {
     }
     return (
         <>
-            <div className={styles.homeView}>
+            <div className={styles.welcomeView}>
                 <HomeDescription />
                 <HomeButtonsView
                     projectsOnClickHandler={() => {updateCurrentTab(Tab.projects)}}
@@ -74,10 +72,10 @@ const HomeView: React.FC = (props) => {
                     contactMeOnClickHandler={() => {updateContactMe(true)}}
                     onBlurHandler={() => {}} />
             </div>
-            {currentTab === Tab.projects && <ProjectsView />}
-            {currentTab === Tab.libraries && <LibrariesView />}
-            {isSummary && <OverlayView onCancelHandler={() => {updateSummary(false)}}><InfoView /></OverlayView>}
-            {isContactMe && <OverlayView onCancelHandler={() => {updateContactMe(false)}}><ContactsView /></OverlayView>}
+            <InfoView />
+            <ProjectsView />
+            <LibrariesView />
+            <ContactsView />
         </>
     )
 }

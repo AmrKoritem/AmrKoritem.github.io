@@ -12,7 +12,7 @@ const ContactsView: React.FC = (props) => {
   }
   return (
     <div className={styles.contactsView}>
-        <h3 style={{textAlign: "center", marginTop: 0}}>Contacts</h3>
+        <h3 style={{textAlign: "start", marginTop: 0}}>Contacts:</h3>
         <div style={rowStyle}>
             <p><b>Email:</b></p>
             <a style={textMarginStyle} href="amr.koritem92@gmail.com">amr.koritem92@gmail.com</a>

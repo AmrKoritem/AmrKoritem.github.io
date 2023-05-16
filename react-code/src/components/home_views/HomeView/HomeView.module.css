@@ -1,11 +1,12 @@
-.homeView {
+.welcomeView {
     display: grid;
     gap: 10px;
     margin: 0;
     grid-template-columns: repeat(2, auto);
     place-items: center;
+    height: 100vh;
 }
 
 @media (max-width: 650px) {
-    .homeView { grid-template-columns: repeat(1, auto); }
+    .welcomeView { grid-template-columns: repeat(1, auto); }
 }
