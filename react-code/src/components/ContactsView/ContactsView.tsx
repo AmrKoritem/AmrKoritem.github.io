@@ -1,7 +1,7 @@
 import React from "react"
 import styles from "./ContactsView.module.css"
 
-const ContactsView: React.FC = (props) => {
+const ContactsView: React.FC<{id: string}> = (props) => {
   const rowStyle: React.CSSProperties = {
     display: "flex",
     flexDirection: "row"
@@ -11,7 +11,7 @@ const ContactsView: React.FC = (props) => {
     marginRight: 10
   }
   return (
-    <div className={styles.contactsView}>
+    <div id={props.id} className={styles.contactsView}>
         <h3 style={{textAlign: "start", marginTop: 0}}>Contacts:</h3>
         <div style={rowStyle}>
             <p><b>Email:</b></p>

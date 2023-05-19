@@ -67,7 +67,7 @@ const TechnicalInfo: React.FC = (props) => {
   );
 };
 
-const InfoView: React.FC = (props) => {
+const InfoView: React.FC<{id?: string}> = (props) => {
   const infoStyle: React.CSSProperties = {
     padding: 10,
     display: "flex",
@@ -76,7 +76,7 @@ const InfoView: React.FC = (props) => {
     backgroundColor: "#1a1a1a",
   };
   return (
-    <div style={infoStyle}>
+    <div id={props.id} style={infoStyle}>
       <div className={styles.topView}>
         <img src={amrKoritem} className={styles.profilePicture} />
         <PersonalInfo />

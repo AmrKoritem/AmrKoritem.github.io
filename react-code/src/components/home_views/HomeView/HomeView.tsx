@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useState } from "react";
 
 import freeLance from "../../../assets/json/free-lance.json";
@@ -15,18 +15,12 @@ import AchievementGrid from "./../../achievement_views/AchievementGrid";
 import InfoView from "../../InfoView";
 import ContactsView from "../../ContactsView";
 
-enum Tab {
-  none,
-  projects,
-  libraries,
-}
-
-const ProjectsView: React.FC = (props) => {
+const ProjectsView: React.FC<{id: string}> = (props) => {
   const inovaIos: Achievement[] = vois.ios;
   const achievements = inovaIos.concat(freeLance.ios).concat(inova.ios);
   return (
     <>
-      <AchievementHeader title="↓↓↓ iOS Apps ↓↓↓" />
+      <AchievementHeader id={props.id} title="↓↓↓ iOS Apps ↓↓↓" />
       <AchievementGrid achievements={achievements} />
       <AchievementHeader title="↓↓↓ Flutter Apps ↓↓↓" />
       <AchievementGrid achievements={inova.flutter} />
@@ -34,29 +28,30 @@ const ProjectsView: React.FC = (props) => {
   );
 };
 
-const LibrariesView: React.FC = (props) => {
+const LibrariesView: React.FC<{id: string}> = (props) => {
   return (
     <>
-      <AchievementHeader title="↓↓↓ Open Source Libraries ↓↓↓" />
+      <AchievementHeader id={props.id} title="↓↓↓ Open Source Libraries ↓↓↓" />
       <AchievementGrid achievements={openSourceLib.swift} />
     </>
   );
 };
 
 const HomeView: React.FC = (props) => {
+  const scrollto = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   return (
     <>
       <div className={styles.welcomeView}>
         <HomeDescription />
         <HomeButtonsView
-          projectsOnClickHandler={() => {}}
-          librariesOnClickHandler={() => {}}
-          summaryOnClickHandler={() => {}}
-          contactMeOnClickHandler={() => {}}
+          projectsOnClickHandler={() => {scrollto('projects')}}
+          librariesOnClickHandler={() => {scrollto('libraries')}}
+          summaryOnClickHandler={() => {scrollto('summary')}}
+          contactMeOnClickHandler={() => {scrollto('contacts')}}
           onBlurHandler={() => {}}
         />
       </div>
-      <InfoView />
+      <InfoView id={'summary'} />
       <h2
         style={{
           margin: 0,
@@ -70,9 +65,9 @@ const HomeView: React.FC = (props) => {
       >
         Achievements:
       </h2>
-      <ProjectsView />
-      <LibrariesView />
-      <ContactsView />
+      <ProjectsView id={'projects'} />
+      <LibrariesView id={'libraries'} />
+      <ContactsView id={'contacts'} />
     </>
   );
 };
