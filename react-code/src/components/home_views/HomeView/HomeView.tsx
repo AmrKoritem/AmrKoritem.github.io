@@ -1,5 +1,4 @@
-import React, { useRef } from "react";
-import { useState } from "react";
+import React from "react";
 
 import freeLance from "../../../assets/json/free-lance.json";
 import inova from "../../../assets/json/inova.json";
