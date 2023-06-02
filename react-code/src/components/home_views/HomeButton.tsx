@@ -27,7 +27,7 @@ const HomeButton: React.FC<Props> = (props) => {
       type="button"
       style={style}
     >
-      <p>{props.title}</p>
+      <p style={{color: "rgba(255, 255, 255, 0.87)"}}>{props.title}</p>
       {props.children}
     </button>
   );

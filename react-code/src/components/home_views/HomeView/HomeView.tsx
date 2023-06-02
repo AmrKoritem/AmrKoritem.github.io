@@ -40,9 +40,7 @@ const LibrariesView: React.FC<{ id: string }> = (props) => {
 const HomeView: React.FC = (props) => {
   const scrollto = (id: string) => {
     const element = document.getElementById(id);
-    console.log("hopa")
     if (element != null && element != undefined) {
-        console.log("hopa bs")
       scrollIntoView(element, {
         behavior: "smooth",
       });
