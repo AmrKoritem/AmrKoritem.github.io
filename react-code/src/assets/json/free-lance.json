@@ -68,6 +68,27 @@
                 "Autolayout",
                 "Hardware sensors"
             ]
+        },
+        {
+            "name": "Sportfy (partner app)",
+            "image": {
+                "link": "",
+                "alt": "Image Unavailable"
+            },
+            "description": "",
+            "is_from_scratch": true,
+            "is_maintained": true,
+            "is_add_feat": true,
+            "is_redesign": true,
+            "is_handed_over": false,
+            "isSwiftUI": false,
+            "link": "",
+            "tags": [
+                "MVVM",
+                "Calendar Day View",
+                "Autolayout",
+                "Restful api"
+            ]
         }
     ]
 }

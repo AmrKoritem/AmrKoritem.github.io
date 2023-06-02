@@ -1,32 +1,80 @@
 {
-    "swift": [
-        {
-            "name": "AKLanguageManager",
-            "image": {
-                "link": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-                "alt": "Github"
-            },
-            "description": "AKLanguageManager is a language manager that localizes your app without having to restart it. It handles strings, numbers, layout direction, images direction and text alignment.",
-            "latest_version": "v2.0.2",
-            "is_from_scratch": true,
-            "is_maintained": true,
-            "is_add_feat": true,
-            "is_handed_over": false,
-            "is_objc_supported": true,
-            "link": "https://github.com/AmrKoritem/AKLanguageManager",
-            "support": [
-                "iOS",
-                "tvOS"
-            ],
-            "compatiblity": [
-                "UIKit",
-                "SwiftUI"
-            ],
-            "integration": [
-                "Cocoa Pods",
-                "Swift Package Manager"
-            ],
-            "tags": []
-        }
-    ]
+  "swift": [
+    {
+      "name": "AKLanguageManager",
+      "image": {
+        "link": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+        "alt": "Github"
+      },
+      "description": "AKLanguageManager is a language manager that localizes your app without having to restart it. It handles strings, numbers, layout direction, images direction and text alignment.",
+      "latest_version": "v2.0.2",
+      "is_from_scratch": true,
+      "is_maintained": true,
+      "is_add_feat": true,
+      "is_handed_over": false,
+      "is_objc_supported": true,
+      "link": "https://github.com/AmrKoritem/AKLanguageManager",
+      "support": ["iOS", "tvOS"],
+      "compatiblity": ["UIKit", "SwiftUI"],
+      "integration": ["Cocoa Pods", "Swift Package Manager"],
+      "tags": []
+    },
+    {
+      "name": "AKUpdateManager",
+      "image": {
+        "link": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+        "alt": "Github"
+      },
+      "description": "AKUpdateManager manages your app updates.",
+      "latest_version": "v1.0.1",
+      "is_from_scratch": true,
+      "is_maintained": true,
+      "is_add_feat": true,
+      "is_handed_over": false,
+      "is_objc_supported": false,
+      "link": "https://github.com/AmrKoritem/AKUpdateManager",
+      "support": ["iOS", "tvOS"],
+      "compatiblity": ["UIKit", "SwiftUI"],
+      "integration": ["Cocoa Pods", "Swift Package Manager"],
+      "tags": []
+    },
+    {
+      "name": "AKKeychainManager",
+      "image": {
+        "link": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+        "alt": "Github"
+      },
+      "description": "AKKeychainManager manages the keychain services.",
+      "latest_version": "v2.0.0",
+      "is_from_scratch": true,
+      "is_maintained": true,
+      "is_add_feat": true,
+      "is_handed_over": false,
+      "is_objc_supported": true,
+      "link": "https://github.com/AmrKoritem/AKKeychainManager",
+      "support": ["iOS", "tvOS"],
+      "compatiblity": ["UIKit", "SwiftUI"],
+      "integration": ["Cocoa Pods", "Swift Package Manager"],
+      "tags": []
+    },
+    {
+      "name": "AKApiManager",
+      "image": {
+        "link": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+        "alt": "Github"
+      },
+      "description": "AKApiManager is a layer built on top of Alamofire to facilitate using restful api requests. This pod suits small and medium sized applications best.",
+      "latest_version": "v1.1.0",
+      "is_from_scratch": true,
+      "is_maintained": true,
+      "is_add_feat": true,
+      "is_handed_over": false,
+      "is_objc_supported": false,
+      "link": "https://github.com/AmrKoritem/AKApiManager",
+      "support": ["iOS", "tvOS"],
+      "compatiblity": ["UIKit", "SwiftUI"],
+      "integration": ["Cocoa Pods", "Swift Package Manager"],
+      "tags": []
+    }
+  ]
 }
