@@ -9,18 +9,18 @@ import contactMe from "../../assets/image/contact-me.png";
 import cv from "../../assets/image/cv.png";
 
 type Props = {
-  projectsOnClickHandler: React.FocusEventHandler<HTMLButtonElement>;
-  librariesOnClickHandler: React.FocusEventHandler<HTMLButtonElement>;
-  summaryOnClickHandler: React.FocusEventHandler<HTMLButtonElement>;
-  contactMeOnClickHandler: React.FocusEventHandler<HTMLButtonElement>;
+  projectsOnClickHandler: React.MouseEventHandler<HTMLButtonElement>;
+  librariesOnClickHandler: React.MouseEventHandler<HTMLButtonElement>;
+  summaryOnClickHandler: React.MouseEventHandler<HTMLButtonElement>;
+  contactMeOnClickHandler: React.MouseEventHandler<HTMLButtonElement>;
   onBlurHandler: React.FocusEventHandler<HTMLButtonElement>;
 };
 
 type AchievementsProps = {
-  projectsOnClickHandler: React.FocusEventHandler<HTMLButtonElement>;
-  librariesOnClickHandler: React.FocusEventHandler<HTMLButtonElement>;
-  summaryOnClickHandler: React.FocusEventHandler<HTMLButtonElement>;
-  contactMeOnClickHandler: React.FocusEventHandler<HTMLButtonElement>;
+  projectsOnClickHandler: React.MouseEventHandler<HTMLButtonElement>;
+  librariesOnClickHandler: React.MouseEventHandler<HTMLButtonElement>;
+  summaryOnClickHandler: React.MouseEventHandler<HTMLButtonElement>;
+  contactMeOnClickHandler: React.MouseEventHandler<HTMLButtonElement>;
   onBlurHandler: React.FocusEventHandler<HTMLButtonElement>;
 };
 
@@ -35,6 +35,13 @@ const Achievements: React.FC<AchievementsProps> = (props) => {
   return (
     <div>
       <HomeButton
+        title="Summary"
+        onClickHandler={props.summaryOnClickHandler}
+        onBlurHandler={props.onBlurHandler}
+      >
+        <img src={summary} alt="summary" style={imageStyle} />
+      </HomeButton>
+      <HomeButton
         title="Projects"
         onClickHandler={props.projectsOnClickHandler}
         onBlurHandler={props.onBlurHandler}
@@ -48,13 +55,6 @@ const Achievements: React.FC<AchievementsProps> = (props) => {
         onBlurHandler={props.onBlurHandler}
       >
         <img src={openSource} alt="open source" style={imageStyle} />
-      </HomeButton>
-      <HomeButton
-        title="Summary"
-        onClickHandler={props.summaryOnClickHandler}
-        onBlurHandler={props.onBlurHandler}
-      >
-        <img src={summary} alt="summary" style={imageStyle} />
       </HomeButton>
       <HomeButton
         title="Contact Me"
