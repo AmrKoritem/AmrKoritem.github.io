@@ -8,8 +8,8 @@ const AchievementCell: React.FC<{achievement: Achievement, link?: string}> = (pr
         flexDirection: "column",
         width: "180px",
         alignItems: "center",
-        marginRight: "20px",
-        marginLeft: "20px"
+        marginRight: 20,
+        marginLeft: 20
     }
     return (
         <div style={cellStyle}>
