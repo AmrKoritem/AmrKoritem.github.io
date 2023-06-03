@@ -2,8 +2,6 @@ import React from "react";
 
 import styles from "./AchievementGrid.module.css";
 import { Company } from "../../../models/Company";
-import { FlutterApp } from "../../../models/FlutterApp";
-import FlutterAppCell from "../../FlutterAppCell";
 import AchievementCell from "../AchievementCell";
 
 const AchievementGrid: React.FC<{ achievements: Company[] }> = (props) => {

@@ -1,16 +1,25 @@
-import React from "react"
-import { Achievement } from "../../models/Achievement"
-import AchievementCell from "./AchievementCell"
+import React from "react";
 
-const AchievementList: React.FC<{achievements: Achievement[]}> = (props) => {
-    return (
-        <div style={{ display: "flex", flexDirection: "row", overflowX: "scroll" }}>
-            {props.achievements.map(achievement => {
-                let link: string = "link" in achievement ? (achievement.link as string) : ""
-                return <AchievementCell key={achievement.name} achievement={achievement} link={link} />
-            })}
-        </div>
-    )
-}
+import AchievementCell from "./AchievementCell";
+import { Company } from "../../models/Company";
 
-export default AchievementList
+const AchievementList: React.FC<{ companies: Company[] }> = (props) => {
+  return (
+    <div style={{ display: "flex", flexDirection: "row", overflowX: "scroll" }}>
+      {props.companies.map((company) => {
+        const achievement = company.achievement;
+        const link: string =
+          "link" in achievement ? (achievement.link as string) : "";
+        return (
+          <AchievementCell
+            key={achievement.name}
+            company={company}
+            link={link}
+          />
+        );
+      })}
+    </div>
+  );
+};
+
+export default AchievementList;
