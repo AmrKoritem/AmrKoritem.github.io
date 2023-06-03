@@ -14,16 +14,23 @@ import AchievementHeader from "../../achievement_views/AchievementHeader";
 import AchievementGrid from "./../../achievement_views/AchievementGrid";
 import InfoView from "../../InfoView";
 import ContactsView from "../../ContactsView";
+import { Company } from "../../../models/Company";
+
+function getCompanyFrom(name: string, achievements: Achievement[]) {
+  return achievements.map((app) => new Company(name, app));
+}
 
 const ProjectsView: React.FC<{ id: string }> = (props) => {
-  const inovaIos: Achievement[] = vois.ios;
-  const achievements = inovaIos.concat(freeLance.ios).concat(inova.ios);
+  const voisIos = getCompanyFrom("vois", vois.ios);
+  const achievements = voisIos
+    .concat(getCompanyFrom("free lance", freeLance.ios))
+    .concat(getCompanyFrom("inova", inova.ios));
   return (
     <>
       <AchievementHeader id={props.id} title="↓↓↓ iOS Apps ↓↓↓" />
       <AchievementGrid achievements={achievements} />
       <AchievementHeader title="↓↓↓ Flutter Apps ↓↓↓" />
-      <AchievementGrid achievements={inova.flutter} />
+      <AchievementGrid achievements={getCompanyFrom("inova", inova.flutter)} />
     </>
   );
 };
@@ -32,7 +39,7 @@ const LibrariesView: React.FC<{ id: string }> = (props) => {
   return (
     <>
       <AchievementHeader id={props.id} title="↓↓↓ Open Source Libraries ↓↓↓" />
-      <AchievementGrid achievements={openSourceLib.swift} />
+      <AchievementGrid achievements={getCompanyFrom("swift", openSourceLib.swift)} />
     </>
   );
 };
