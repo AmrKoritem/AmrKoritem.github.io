@@ -50,19 +50,28 @@ export class CompanyExperience {
         return this.getMilliSeconds() / nowMilliSeconds * 100
     }
 
-    getMonthsYearsStr = () => {
+    getMonths = () => {
         const inclusionFactor = 1
         const toDay = this.getToDate().getDate()
         const fromDay = this.getFromDate().getDate()
         const toMonth = this.getToDate().getMonth() - (toDay < 15 ? 1 : 0)
         const fromMonth = this.getFromDate().getMonth() + (fromDay > 15 ? 1 : 0)
         let months = toMonth - fromMonth + inclusionFactor
-        const timeDiff = this.getToDate().getTime() - this.getFromDate().getTime()
-        const diffInDays = timeDiff / (1000 * 3600 * 24)
-        const years = Math.trunc(diffInDays / 365)
         if (months < 0) {
             months = 12 + months
         }
+        return months
+    }
+
+    getYears = () => {
+        const timeDiff = this.getToDate().getTime() - this.getFromDate().getTime()
+        const diffInDays = timeDiff / (1000 * 3600 * 24)
+        return Math.trunc(diffInDays / 365)
+    }
+
+    getMonthsYearsStr = () => {
+        let months = this.getMonths()
+        const years = this.getYears()
         const yearsStr = years == 0 ? '' : `${years}y,`
         const space = years == 0 || months == 0 ? '' : ' '
         const monthsStr = months == 0 ? '' : `${months}m`
