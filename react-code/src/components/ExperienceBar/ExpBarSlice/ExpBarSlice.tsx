@@ -14,7 +14,7 @@ const ExpBarSlice: React.FC<{name: string, experience: CompanyExperience}> = (pr
     }
     const centerStyle: React.CSSProperties = {flex: 1, textAlign: "center"}
     return (
-      <div style={{display: "flex", flexDirection: "column", margin: 0, width: percentage}}>
+      <div style={{display: "flex", flexDirection: "column", margin: 0, width: `${percentage}%`}}>
           <p style={centerStyle}>{props.name.charAt(0).toUpperCase() + props.name.slice(1)}</p>
           <div className={styles.expBarSlice} style={{backgroundColor: props.experience.color}}>
             <p className={styles.expDate} style={dateStyle}>{startDate}</p>

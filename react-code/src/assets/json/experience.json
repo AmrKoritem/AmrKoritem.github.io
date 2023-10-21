@@ -6,7 +6,12 @@
     },
     "vois": {
         "from": "01/03/2022",
-        "to": "present",
+        "to": "03/08/2023",
         "color": "red"
+    },
+    "objects": {
+        "from": "06/08/2023",
+        "to": "present",
+        "color": "blue"
     }
 }
