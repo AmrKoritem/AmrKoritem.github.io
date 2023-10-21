@@ -7,6 +7,7 @@ import summary from "../../assets/image/summary.png";
 import linkedIn from "../../assets/image/linked-in.png";
 import contactMe from "../../assets/image/contact-me.png";
 import cv from "../../assets/image/cv.png";
+import resume from "../../assets/image/resume.png";
 
 type Props = {
   projectsOnClickHandler: React.MouseEventHandler<HTMLButtonElement>;
@@ -112,15 +113,15 @@ const Links: React.FC<{
         </HomeButton>
       </a>
       <a
-        href="https://drive.google.com/file/d/1fK2gauBUcQicS2Yw1W2k0BXc5SoQiBpO/view?usp=share_link"
+        href="https://drive.google.com/file/d/1hrXM7DYitO_RVyP8bPufG301tT3Me41B/view?usp=share_link"
         target="_blank"
       >
-        <HomeButton title="iOS CV">
-          <img src={swift} alt="swift" style={imageStyle} />
+        <HomeButton title="Resume">
+          <img src={resume} alt="resume" style={imageStyle} />
         </HomeButton>
       </a>
       <a
-        href="https://drive.google.com/file/d/1yisthS3vPG_SasIH-hjnqF7g-WStLSR8/view?usp=share_link"
+        href="https://drive.google.com/file/d/1A9auOMI8IB8TczfMFg2uCvVCuqizqp0m/view?usp=share_link"
         target="_blank"
       >
         <HomeButton title="Full CV">
