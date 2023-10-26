@@ -4,10 +4,11 @@ import inova from "../../assets/image/inova.png";
 import vodafone from "../../assets/image/vodafone.svg";
 import freeLance from "../../assets/image/free-lance.png";
 import swift from "../../assets/image/swift.png";
+import objects from "../../assets/image/objects.png";
 
 import { Company } from "../../models/Company";
 import AppImage from "../AppImage";
-import { FlutterApp } from "../../models/FlutterApp";
+import { CrossPlatformApp } from "../../models/CrossPlatformApp";
 import StoreButton from "../StoreButton";
 
 const InovaView: React.FC = (props) => {
@@ -107,6 +108,31 @@ const SwiftView: React.FC = (props) => {
   );
 };
 
+const ObjectsView: React.FC = (props) => {
+  const style: React.CSSProperties = {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#1a1a1a",
+    padding: 3,
+    margin: 5,
+  };
+  const imageStyle: React.CSSProperties = {
+    width: 70,
+    height: 20,
+    objectFit: "fill",
+    marginTop: 4,
+  };
+  return (
+    <div style={style}>
+      <p style={{ textAlign: "center", marginRight: 5, marginLeft: 5 }}>
+        Under
+      </p>
+      <img src={objects} alt={"objects"} style={imageStyle} />
+    </div>
+  );
+};
+
 const CompanyView: React.FC<{ name: string }> = (props) => {
   if (props.name == "inova") {
     return <InovaView />;
@@ -119,6 +145,9 @@ const CompanyView: React.FC<{ name: string }> = (props) => {
   }
   if (props.name == "swift") {
     return <SwiftView />;
+  }
+  if (props.name == "objects") {
+    return <ObjectsView />;
   }
   return <></>;
 };
@@ -138,7 +167,7 @@ const StoresView: React.FC<{
 const AchievementCell: React.FC<{ company: Company; link?: string }> = (
   props
 ) => {
-  const flutterApp = props.company.achievement as FlutterApp;
+  const flutterApp = props.company.achievement as CrossPlatformApp;
   const cellStyle: React.CSSProperties = {
     display: "flex",
     flexDirection: "column",

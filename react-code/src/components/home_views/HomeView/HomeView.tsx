@@ -5,6 +5,7 @@ import freeLance from "../../../assets/json/free-lance.json";
 import inova from "../../../assets/json/inova.json";
 import openSourceLib from "../../../assets/json/open-source.json";
 import vois from "../../../assets/json/vois.json";
+import objects from "../../../assets/json/objects.json";
 
 import { Achievement } from "../../../models/Achievement";
 import styles from "./HomeView.module.css";
@@ -22,15 +23,17 @@ function getCompanyFrom(name: string, achievements: Achievement[]) {
 
 const ProjectsView: React.FC<{ id: string }> = (props) => {
   const voisIos = getCompanyFrom("vois", vois.ios);
-  const achievements = voisIos
+  const iosApps = voisIos
     .concat(getCompanyFrom("free lance", freeLance.ios))
     .concat(getCompanyFrom("inova", inova.ios));
+  const objectsFlutter = getCompanyFrom("objects", objects.flutter);
+  const flutterApps = objectsFlutter.concat(getCompanyFrom("inova", inova.flutter));
   return (
     <>
       <AchievementHeader id={props.id} title="↓↓↓ iOS Apps ↓↓↓" />
-      <AchievementGrid achievements={achievements} />
+      <AchievementGrid achievements={iosApps} />
       <AchievementHeader title="↓↓↓ Flutter Apps ↓↓↓" />
-      <AchievementGrid achievements={getCompanyFrom("inova", inova.flutter)} />
+      <AchievementGrid achievements={flutterApps} />
     </>
   );
 };

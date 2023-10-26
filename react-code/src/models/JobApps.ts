@@ -1,7 +1,8 @@
 import { IosApp } from "./IosApp"
-import { FlutterApp } from "./FlutterApp"
+import { CrossPlatformApp } from "./CrossPlatformApp"
 
 export interface JobApps {
     ios?: IosApp[]
-    flutter?: FlutterApp[]
+    flutter?: CrossPlatformApp[]
+    reactNative?: CrossPlatformApp[]
   }

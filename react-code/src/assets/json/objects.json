@@ -1,3 +1,27 @@
 {
-  "flutter": []
+  "flutter": [
+    {
+      "name": "App Experts",
+      "image": {
+          "link": "",
+          "alt": "Image Unavailable"
+      },
+      "description": "A freemium mobile app builder that gives you the power to turn your WordPress-powered website into a mobile application.",
+      "is_from_scratch": false,
+      "is_maintained": true,
+      "is_add_feat": false,
+      "is_redesign": false,
+      "is_handed_over": true,
+      "links": {
+          "app_store": "https://wordpress.org/plugins/appexperts/",
+          "play_store": "https://wordpress.org/plugins/appexperts/"
+      },
+      "tags": [
+          "River-pod",
+          "Localization",
+          "Restful api",
+          "Asset management"
+      ]
+  }
+  ]
 }

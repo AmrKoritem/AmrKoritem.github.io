@@ -16,5 +16,30 @@
             "link": "",
             "tags": []
         }
+    ],
+    "reactNative": [
+        {
+            "name": "Vodafone One App",
+            "image": {
+                "link": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/2e/8d/61/2e8d610e-356b-1707-a1e9-138e9ed55fb8/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/540x540bb.jpg",
+                "alt": "Vodafone | VOIS"
+            },
+            "description": "One application containing all Vodafone app features for all countries feature flagged.",
+            "is_from_scratch": false,
+            "is_maintained": false,
+            "is_add_feat": true,
+            "is_redesign": false,
+            "is_handed_over": true,
+            "links": {
+                "app_store": "https://apps.apple.com/us/app/ana-vodafone/id437564823?itsct=apps_box_link&itscg=30200",
+                "play_store": ""
+            },
+            "tags": [
+                "Multi-flavor",
+                "Redux",
+                "Typescript",
+                "Mono-repo"
+            ]
+        }
     ]
 }

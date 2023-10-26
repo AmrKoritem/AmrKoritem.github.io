@@ -87,7 +87,8 @@
                 "MVVM",
                 "Calendar Day View",
                 "Autolayout",
-                "Restful api"
+                "Restful api",
+                "Mono-repo"
             ]
         }
     ]

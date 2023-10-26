@@ -190,10 +190,10 @@
             ]
         },
         {
-            "name": "Edugram",
+            "name": "Smart Vision Academy",
             "image": {
-                "link": "",
-                "alt": "Image Unavailable"
+                "link": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/5d/37/3d/5d373de4-303a-f6ee-c2e7-2d5cc63c4915/AppIcon-2-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/540x540bb.jpg",
+                "alt": "Smart Vision Academy"
             },
             "description": "",
             "is_from_scratch": false,
@@ -202,7 +202,7 @@
             "is_redesign": false,
             "is_handed_over": false,
             "isSwiftUI": false,
-            "link": "",
+            "link": "https://apps.apple.com/us/app/smart-vision-academy/id1539326137",
             "tags": [
                 "MVVM",
                 "Restful api",
@@ -214,10 +214,10 @@
     ],
     "flutter": [
         {
-            "name": "Med Valley",
+            "name": "Med Cloud",
             "image": {
                 "link": "",
-                "alt": "Image Unavailable"
+                "alt": "Med Cloud"
             },
             "description": "",
             "is_from_scratch": true,
@@ -226,8 +226,8 @@
             "is_redesign": false,
             "is_handed_over": true,
             "links": {
-                "app_store": "",
-                "play_store": ""
+                "app_store": "https://inovaeg.com/portfolio/medvalley/",
+                "play_store": "https://inovaeg.com/portfolio/medvalley/"
             },
             "tags": [
                 "Providers",
@@ -272,8 +272,8 @@
             "is_redesign": false,
             "is_handed_over": false,
             "links": {
-                "app_store": "https://apps.apple.com/eg/app/سكر-sukar/id1480506758",
-                "play_store": "https://play.google.com/store/apps/details?id=com.alexapps.sukar&hl=en&gl=US"
+                "app_store": "",
+                "play_store": ""
             },
             "tags": [
                 "Providers",
@@ -284,12 +284,12 @@
             ]
         },
         {
-            "name": "Salatk",
+            "name": "Wafrh",
             "image": {
                 "link": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/95/d1/d1/95d1d1d9-148d-ed08-4242-773b05f77d4f/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/540x540bb.jpg",
-                "alt": "Salatk | سلتك"
+                "alt": "Wafrh | وفرة"
             },
-            "description": "Salatk helps you with searching for the best offers in stores.",
+            "description": "Wafrh helps you with searching for the best offers in stores.",
             "is_from_scratch": false,
             "is_maintained": true,
             "is_add_feat": true,
